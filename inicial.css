@@ -1,0 +1,184 @@
+/* Resetando margens e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body e fonte básica */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegação dentro do cabeçalho */
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botão */
+.btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Seção Hero */
+.hero {
+    background: #007bff;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilo para as seções de recursos */
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.features-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.features-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.features-content ul {
+    list-style-type: none;
+}
+
+.features-content ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.features img {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+/* Carrossel de Depoimentos */
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonials-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo do carrossel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-item p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+.carousel-item strong {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.carousel img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+/* Botões de navegação do carrossel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
