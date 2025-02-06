@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+:root {
+    --bg-dark: #0d0d0d;
+    --bg-card: rgba(255, 255, 255, 0.1);
+    --text-color: #d9d9d9;
+    --neon-blue: #00d4ff;
+    --neon-green: #00ff85;
+    --gray-dark: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px;
+    background: var(--gray-dark);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Espaço entre o formulário e a imagem */
+    margin-top: 40px;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+/* Card de Cadastro */
+.card {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px;
+    width: 550px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.card h2 {
+    color: var(--neon-blue);
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+input {
+    background: var(--gray-dark);
+    border: 1px solid var(--neon-blue);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: var(--text-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Botão */
+button {
+    background: var(--neon-blue);
+    color: var(--bg-dark);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--neon-green);
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Imagem do Porquinho */
+.piggy-container {
+    max-width: 480px;
+}
+
+.piggy-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: var(--gray-dark);
+    color: var(--text-color);
+    font-size: 14px;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
