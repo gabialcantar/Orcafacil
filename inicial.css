@@ -1,184 +1,239 @@
-/* Resetando margens e padding para todos os elementos */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+:root {
+    --bg-dark: #0d0d0d;
+    --bg-card: rgba(255, 255, 255, 0.1);
+    --text-color: #d9d9d9;
+    --neon-blue: #00d4ff;
+    --neon-green: #00ff85;
+    --gray-dark: #1a1a1a;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Estilo do body e fonte básica */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background: var(--bg-dark);
+    color: var(--text-color);
 }
 
-/* Estilo do cabeçalho */
+/* NAVBAR */
 header {
-    background-color: #333;
-    color: #fff;
+    background: var(--gray-dark);
     padding: 20px;
     text-align: center;
+    box-shadow: 0 0 15px var(--neon-blue);
 }
 
-/* Navegação dentro do cabeçalho */
-header nav {
-    margin-top: 10px;
+header h1 {
+    font-size: 32px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
 }
 
-header nav a {
-    color: #fff;
+header h2 {
+    font-size: 18px;
+    margin-top: 5px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
     margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
 }
 
-/* Botão */
-.btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
+nav a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+nav .btn {
+    background: var(--neon-blue);
+    padding: 10px 15px;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
+    color: var(--bg-dark);
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: #218838;
+nav .btn:hover {
+    background: var(--neon-green);
+    box-shadow: 0 0 15px var(--neon-green);
 }
 
-/* Seção Hero */
+/* HERO SECTION */
 .hero {
-    background: #007bff;
-    color: #fff;
-    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 100px 20px;
+    background: url('img/fundo-tecnologico.jpg') no-repeat center/cover;
+}
+
+.hero-content {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px var(--neon-blue);
+    max-width: 600px;
 }
 
 .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
 }
 
 .hero p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-top: 15px;
 }
 
 .hero .btn {
-    background-color: #f8f9fa;
-    color: #333;
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--neon-blue);
+    padding: 12px 20px;
+    border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
+    color: var(--bg-dark);
+    transition: 0.3s;
 }
 
-/* Estilo para as seções de recursos */
+.hero .btn:hover {
+    background: var(--neon-green);
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* SEÇÃO RECURSOS */
 .features {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    background-color: #fff;
+    justify-content: space-around;
+    padding: 60px 20px;
 }
 
 .features-content {
-    flex: 1;
-    padding: 20px;
+    max-width: 500px;
 }
 
-.features-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.features h2 {
+    font-size: 26px;
+    color: var(--neon-blue);
 }
 
-.features-content ul {
-    list-style-type: none;
+.features ul {
+    list-style: none;
+    margin-top: 20px;
 }
 
-.features-content ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
+.features li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 4px solid var(--neon-blue);
+    transition: 0.3s;
+}
+
+.features li:hover {
+    border-left: 4px solid var(--neon-green);
+    color: var(--neon-green);
 }
 
 .features img {
-    flex: 1;
-    max-width: 50%;
-    border-radius: 8px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--neon-blue);
 }
 
-/* Carrossel de Depoimentos */
+/* CARROSSEL DE DEPOIMENTOS */
 .testimonials {
-    background-color: #f8f9fa;
-    padding: 50px;
     text-align: center;
+    padding: 60px 20px;
+    background: var(--gray-dark);
+    box-shadow: 0 0 15px var(--neon-blue);
 }
 
-.testimonials-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.testimonials h2 {
+    font-size: 26px;
+    color: var(--neon-blue);
 }
 
-/* Estilo do carrossel */
 .carousel {
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-top: 20px;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
 }
 
 .carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 15px var(--neon-blue);
     text-align: center;
-    padding: 10px;
+    transition: 0.3s;
 }
 
-.carousel-item p {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #555;
+.carousel-item:hover {
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.carousel-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .carousel-item strong {
-    font-size: 1.2rem;
-    font-weight: bold;
     display: block;
     margin-top: 10px;
+    font-size: 14px;
 }
 
-.carousel img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 20px 0;
-}
-
-/* Botões de navegação do carrossel */
+/* BOTÕES DO CARROSSEL */
 .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: var(--neon-blue);
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.carousel-button.left {
-    left: 10px;
+.carousel-button:hover {
+    background: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
 }
 
-.carousel-button.right {
-    right: 10px;
-}
-
-/* Rodapé */
+/* RODAPÉ */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    background: var(--gray-dark);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--neon-blue);
 }
