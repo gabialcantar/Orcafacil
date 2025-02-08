@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+:root {
+    --bg-dark: #0d0d0d;
+    --bg-card: rgba(255, 255, 255, 0.1);
+    --text-color: #d9d9d9;
+    --neon-blue: #00d4ff;
+    --neon-green: #00ff85;
+    --gray-dark: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-color);
+}
+
+/* HEADER */
+header {
+    background: var(--gray-dark);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+header h1 {
+    font-size: 32px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    margin: 0 15px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover, .ativo {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* SEÇÃO SOBRE */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 20px;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sobre-content {
+    max-width: 600px;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.sobre h2 {
+    font-size: 28px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sobre ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sobre li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid var(--neon-blue);
+    transition: 0.3s;
+}
+
+.sobre li:hover {
+    border-left: 4px solid var(--neon-green);
+    color: var(--neon-green);
+}
+
+.sobre img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--gray-dark);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--neon-blue);
+    margin-top: 50px;
+}
