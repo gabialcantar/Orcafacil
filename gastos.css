@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-card: rgba(255, 255, 255, 0.1);
+  --text-color: #d9d9d9;
+  --neon-blue: #00d4ff;
+  --neon-green: #00ff85;
+  --gray-dark: #1a1a1a;
+}
+
+/* ESTILIZAÇÃO GERAL */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-color);
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+  text-align: center;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+  margin-bottom: 20px;
+}
+
+/* LABELS */
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* CAMPOS DE INPUT E SELECT */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--gray-dark);
+  color: var(--text-color);
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* BOTÃO */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background: var(--neon-blue);
+  border: none;
+  border-radius: 5px;
+  color: var(--bg-dark);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+/* ITENS DE GASTOS */
+.gasto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-dark);
+  padding: 10px 0;
+  margin: 5px 0;
+}
+
+.gasto-item span {
+  font-size: 16px;
+}
+
+.gasto-item button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: var(--neon-blue);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.gasto-item button:hover {
+  color: var(--neon-green);
+}
+
+/* CONTÊINERS DOS RESULTADOS */
+#lista-gastos,
+#resumo {
+  margin-top: 20px;
+}

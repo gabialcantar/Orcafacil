@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/poupanca.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="gastos.css"/>
+    <title>Categorize seus Gastos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+        .gasto-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1> OrçaFácil</h1>
+    </div>
+    <h2>Categorize seus Gastos</h2>
+    <label>Valor: R$<input type="number" id="valor" step="0.01"></label>
+    <label>Categoria:
+        <select id="categoria">
+            <option value="Alimentação">Alimentação</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Saúde">Saúde</option>
+            <option value="Outros">Outros</option>
+        </select>
+    </label>
+    <button onclick="adicionarGasto()">Adicionar</button>
+    
+    <h3>Gastos</h3>
+    <div id="lista-gastos"></div>
+    
+    <h3>Resumo por Categoria</h3>
+    <div id="resumo"></div>
+    
+    <script>
+        let gastos = [];
+        
+        function adicionarGasto() {
+            let valor = parseFloat(document.getElementById("valor").value);
+            let categoria = document.getElementById("categoria").value;
+            
+            if (!valor) {
+                alert("Insira um valor válido!");
+                return;
+            }
+            
+            gastos.push({ valor, categoria });
+            atualizarLista();
+            atualizarResumo();
+        }
+        
+        function atualizarLista() {
+            let lista = document.getElementById("lista-gastos");
+            lista.innerHTML = "";
+            
+            gastos.forEach((gasto, index) => {
+                let div = document.createElement("div");
+                div.classList.add("gasto-item");
+                div.innerHTML = `<span>${gasto.categoria}: R$ ${gasto.valor.toFixed(2)}</span> <button onclick="removerGasto(${index})">❌</button>`;
+                lista.appendChild(div);
+            });
+        }
+        
+        function atualizarResumo() {
+            let resumo = {};
+            
+            gastos.forEach(gasto => {
+                if (!resumo[gasto.categoria]) {
+                    resumo[gasto.categoria] = 0;
+                }
+                resumo[gasto.categoria] += gasto.valor;
+            });
+            
+            let divResumo = document.getElementById("resumo");
+            divResumo.innerHTML = "";
+            
+            for (let categoria in resumo) {
+                let p = document.createElement("p");
+                p.textContent = `${categoria}: R$ ${resumo[categoria].toFixed(2)}`;
+                divResumo.appendChild(p);
+            }
+        }
+        
+        function removerGasto(index) {
+            gastos.splice(index, 1);
+            atualizarLista();
+            atualizarResumo();
+        }
+    </script>
+</body>
+</html>
